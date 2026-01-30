@@ -1,0 +1,28 @@
+meta {
+  name: Create Group
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-groups
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "displayName": "OrderTest113",
+    "linkedToAssetType": "SuiteObjective",
+    "attributeDefinitionIds": []
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

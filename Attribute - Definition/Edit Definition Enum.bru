@@ -1,0 +1,59 @@
+meta {
+  name: Edit Definition Enum
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions/meta-enumbyone
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "id": "meta-enumbyone",
+    "type": "enumeration",
+    "linkedToAssetTypes": [
+      "SuiteObjective"
+    ],
+    "displayName": "enumByOne",
+    "description": "enum desc update",
+    "typeProperties": {
+      "values": [
+        {
+          "id": "abc",
+          "title": "abc",
+          "value": "abc",
+          "backgroundColor": "var(--sapIndicationColor_1b)"
+        },
+        {
+          "id": "def",
+          "title": "def",
+          "value": "def",
+          "backgroundColor": "var(--sapIndicationColor_1b)"
+        }
+      ],
+      "isRequired": false,
+      "changedOn": "2025-11-14T07:42:15.671002Z",
+      "changedBy": "db9d16bb63594706b1d1dbcf51de10b8"
+    },
+    "typeModifiers": {
+      "defaultValue": "",
+      "cardinality": "list",
+      "userModifiableType": false,
+      "userVisible": true,
+      "multiLanguage": false
+    },
+    "isStandard": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

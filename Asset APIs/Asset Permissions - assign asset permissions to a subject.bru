@@ -1,0 +1,33 @@
+meta {
+  name: Asset Permissions - assign asset permissions to a subject
+  type: http
+  seq: 10
+}
+
+post {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/permissions/SuiteTask_e5e32777-4d2a-489e-9335-380878fbfd58
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "assignments": [
+      {
+        "subjectId": "aD2fE78AeeAb0cE96Fd8dCbf3d81A283",
+        "group": false,
+        "permission": "READ"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

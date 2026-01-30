@@ -1,0 +1,21 @@
+meta {
+  name: DELETE asset instance
+  type: http
+  seq: 6
+}
+
+delete {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/instances/SuiteTask_61480764-2601-4c5a-9ad0-88c1d3c2c89f
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,31 @@
+meta {
+  name: Update desc attribute of a task
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea/attribute-values/description
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "description": [
+      {
+        "text": "Task to write unit tests for the new feat 22.12.2025 14.19"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

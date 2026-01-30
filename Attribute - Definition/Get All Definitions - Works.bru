@@ -1,0 +1,29 @@
+meta {
+  name: Get All Definitions - Works
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions?linkedToAssetType=SuiteTask
+  body: none
+  auth: inherit
+}
+
+params:query {
+  linkedToAssetType: SuiteTask
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+vars:pre-request {
+  signavioid: rsefsd fv
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

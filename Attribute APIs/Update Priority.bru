@@ -1,0 +1,27 @@
+meta {
+  name: Update Priority
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea/attribute-values/priority
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+      "priority": "Low"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

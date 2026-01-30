@@ -1,0 +1,32 @@
+meta {
+  name: Asset Permissions - Check a permission for a list
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/permissions/check
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "permission": "WRITE",
+    "sids": [
+      "SuiteObjective_67008c41-1dab-4458-b886-338ac6cc1993",
+      "SuiteTask_ffbbb551-a449-4c18-bc48-5b5e33d479e3",
+      "SuiteTask_c044e850-b3af-4917-a106-6050f5b28a81"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Update name attribute of a task
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea/attribute-values/name
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "name": [
+      {
+        "text": "name at 22.12.2025 14.08",
+        "locale": "vi_VN"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Get asset instances from a list
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/instances/list
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "sids": [
+      "SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea"
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

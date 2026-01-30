@@ -1,0 +1,25 @@
+meta {
+  name: Get values by sid & att id - defect - returns all
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_b70daa81-2f19-4e56-9738-0edcb3b20496/attribute-values?attributeValueId=name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  attributeValueId: name
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

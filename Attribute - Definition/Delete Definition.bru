@@ -1,0 +1,45 @@
+meta {
+  name: Delete Definition
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions/meta-usersingles
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "id": "meta-usersingles",
+    "type": "user",
+    "useIn": [
+      "SuiteObjective"
+    ],
+    "displayName": "usersingles",
+    "description": "single",
+    "typeProperties": {
+      "canAddIndividualUsers": false,
+      "limitUserGroups": [],
+      "canAddUserGroups": false
+    },
+    "typeModifiers": {
+      "defaultValue": "",
+      "cardinality": "list",
+      "userModifiableType": true,
+      "userVisible": true,
+      "multiLanguage": false
+    },
+    "isStandard": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

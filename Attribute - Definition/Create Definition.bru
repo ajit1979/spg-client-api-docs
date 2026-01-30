@@ -1,0 +1,44 @@
+meta {
+  name: Create Definition
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "id": "",
+    "type": "user",
+    "displayName": "usersingles341",
+    "description": "single",
+    "linkedToAssetTypes": [
+      "SuiteObjective"
+    ],
+    "typeProperties": {
+      "canAddUserGroups": false,
+      "limitUserGroups": [],
+      "isRequired": false
+    },
+    "typeModifiers": {
+      "defaultValue": "",
+      "cardinality": "single",
+      "userModifiableType": true,
+      "userVisible": true,
+      "multiLanguage": false
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

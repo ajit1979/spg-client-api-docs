@@ -1,0 +1,49 @@
+meta {
+  name: Create asset instance
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/g/api/library/asset-library/api/v1/asset/instances
+  body: json
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "type": "SuiteTask",
+    "attributes": {
+      "name": [
+        {
+          "value": "Write unit tests"
+        },
+        {
+          "value": "Unittests schreiben",
+          "locale": "de_DE"
+        }
+      ],
+      "description": [
+        {
+          "value": "Task to write unit tests for the new feature"
+        },
+        {
+          "value": "Aufgabe zum Schreiben von Unit-Tests für das neue Feature",
+          "locale": "de_DE"
+        }
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 10
+}

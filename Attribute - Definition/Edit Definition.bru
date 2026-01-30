@@ -1,0 +1,46 @@
+meta {
+  name: Edit Definition
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions/meta-usersingles34
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "id": "meta-usersingles34",
+    "type": "user",
+    "linkedToAssetTypes": [
+      "SuiteObjective"
+    ],
+    "displayName": "usersingles",
+    "description": "single",
+    "typeProperties": {
+      "onlyAllowIndividualUsers": true,
+      "limitUserGroups": [],
+      "onlyAllowUserGroups": false,
+      "allowUsersAndGroups": false
+    },
+    "typeModifiers": {
+      "defaultValue": "",
+      "cardinality": "list",
+      "userModifiableType": true,
+      "userVisible": true,
+      "multiLanguage": false
+    },
+    "isStandard": false
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

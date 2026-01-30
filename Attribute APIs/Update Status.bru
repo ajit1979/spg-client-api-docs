@@ -1,0 +1,27 @@
+meta {
+  name: Update Status
+  type: http
+  seq: 10
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea/attribute-values/status
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+      "status": "In Progress"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

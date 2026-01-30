@@ -1,0 +1,32 @@
+meta {
+  name: Batch get values for given sids list - defect 400
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/attribute-values/batch
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "sids": {
+      "SuiteTask_7125cb5d-c882-48b8-829d-9fa5a6aa027d",
+      "SuiteTask_5851c84a-d560-4888-8ce5-feaf7c42e910",
+      "SuiteInitiative_3bff9b07-e905-43b4-9a53-0f4e2156f5d7",
+      "SuiteTask_22800628-42d2-41ec-b802-378be034df95"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: GET asset permissions - Ajit is owner
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/permissions/SuiteTask_ee818967-fca2-4bdc-832d-62bdb265bac4
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~query: unit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

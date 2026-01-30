@@ -1,0 +1,25 @@
+meta {
+  name: Get All Groups - defect , returns random definitions
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://staging.signavio.com/api/v2/attribute-service/api/v1/attribute-groups?linkedToAssetType=SuitTask
+  body: none
+  auth: inherit
+}
+
+params:query {
+  linkedToAssetType: SuitTask
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

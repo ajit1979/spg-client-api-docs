@@ -1,0 +1,25 @@
+meta {
+  name: Delete values by sid & att id - Defect 405
+  type: http
+  seq: 13
+}
+
+delete {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_22800628-42d2-41ec-b802-378be034df95/attribute-values?attributeValueId=name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  attributeValueId: name
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

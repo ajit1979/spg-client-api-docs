@@ -1,0 +1,29 @@
+meta {
+  name: GET asset instances - SuiteInitiative
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/instances?type=SuiteInitiative&page=0&size=10&query=Guilds&sort=name,asc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  type: SuiteInitiative
+  page: 0
+  size: 10
+  query: Guilds
+  sort: name,asc
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

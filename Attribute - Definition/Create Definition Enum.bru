@@ -1,0 +1,55 @@
+meta {
+  name: Create Definition Enum
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v2/attribute-service/api/v1/attribute-definitions
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioid}}
+}
+
+body:json {
+  {
+    "type": "enumeration",
+    "displayName": "enumByOne",
+    "description": "enum desc",
+    "useIn": [
+      "SuiteObjective"
+    ],
+    "typeProperties": {
+      "values": [
+        {
+          "id": "abc",
+          "title": "abc",
+          "value": "abc",
+          "backgroundColor": "var(--sapIndicationColor_1b)"
+        },
+        {
+          "id": "def",
+          "title": "def",
+          "value": "def",
+          "backgroundColor": "var(--sapIndicationColor_1b)"
+        }
+      ]
+    },
+    "typeModifiers": {
+      "defaultValue": "",
+      "cardinality": "list",
+      "userModifiableType": false,
+      "userVisible": true,
+      "multiLanguage": false
+    },
+    "id": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

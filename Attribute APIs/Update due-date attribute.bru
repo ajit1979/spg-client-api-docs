@@ -1,0 +1,27 @@
+meta {
+  name: Update due-date attribute
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{url}}/api/v2/attribute-service/api/v1/asset/SuiteTask_9a820bf5-e445-4ac4-ab7b-c955ac9e4aea/attribute-values/due-date
+  body: json
+  auth: inherit
+}
+
+headers {
+  x-signavio-id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+body:json {
+  {
+    "due-date": "2025-12-22"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

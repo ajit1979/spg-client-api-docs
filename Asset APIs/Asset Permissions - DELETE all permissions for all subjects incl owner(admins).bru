@@ -1,0 +1,21 @@
+meta {
+  name: Asset Permissions - DELETE all permissions for all subjects incl owner(admins)
+  type: http
+  seq: 12
+}
+
+delete {
+  url: https://staging.signavio.com/g/api/library/asset-library/api/v1/asset/permissions/SuiteTask_eb978207-434b-448c-90d0-0ce20ae79750
+  body: none
+  auth: inherit
+}
+
+headers {
+  X-Signavio-Id: {{signavioId}}
+  Cookie: {{cookie}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
